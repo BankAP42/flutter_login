@@ -29,15 +29,22 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
     });
 
     Timer.periodic(const Duration(seconds: 1), (Timer timer) {
+      if (!mounted) {
+        timer.cancel();
+        return;
+      }
+
       setState(() {
         countdown--;
       });
 
       if (countdown == 0) {
-        setState(() {
-          isCountingDown = false;
-          countdown = 60;
-        });
+        if (mounted) {
+          setState(() {
+            isCountingDown = false;
+            countdown = 60;
+          });
+        }
         timer.cancel();
       }
     });

@@ -76,6 +76,7 @@ class _LoginByPinScreenState extends State<LoginByPinScreen> {
                           pinLegth: 6,
                           controller: mPinController,
                           onCompleted: (mPin) {
+                            mPinController.notifyWrongInput();
                             log('You entered -> $mPin');
                           },
                         ),

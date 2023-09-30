@@ -26,18 +26,6 @@ class TermAndCondition extends StatelessWidget {
       ),
       body: Column(
         children: [
-          ElevatedButton(
-            child: const Text('Submit', style: TextStyle(color: Colors.blue)),
-            onPressed: () {},
-            style: ElevatedButton.styleFrom(
-              primary: Colors.white,
-              onPrimary: Colors.blue, // สีขอบเมื่อถูกกด
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(8.0), // ปรับขอบ
-                side: BorderSide(color: Colors.blue), // สีขอบ
-              ),
-            ),
-          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
